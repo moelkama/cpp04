@@ -6,40 +6,35 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:24:04 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/14 12:26:32 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:16:13 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
-    std::cout<<"Animal Default Constractor called"<<std::endl;
+    std::cout<<"AAnimal Default Constractor called"<<std::endl;
     this->type = "Not Set";
 }
 
-Animal::Animal(const Animal& other)
+AAnimal::AAnimal(const AAnimal& other)
 {
     *this = other;
 }
 
-Animal& Animal::operator=(const Animal& other)
+AAnimal& AAnimal::operator=(const AAnimal& other)
 {
     this->type = other.type;
     return (*this);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-    std::cout<<"Animal Destructor called"<<std::endl;
+    std::cout<<"AAnimal Destructor called"<<std::endl;
 }
 
-void   Animal::makeSound() const
-{
-    std::cout<<"Animal : Sound"<<std::endl;
-}
-
-std::string     Animal::getType() const
+std::string     AAnimal::getType() const
 {
     return (this->type);
 }

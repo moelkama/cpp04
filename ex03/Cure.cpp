@@ -34,5 +34,5 @@ Cure* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-    std::cout<<"* shoots an cure bolt at "<<target.getName()<<" *"<<std::endl;
+    std::cout<<"* heals "<<target.getName()<<"’s wounds *"<<std::endl;
 }

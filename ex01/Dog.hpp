@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:52 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/12 15:52:50 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:03:00 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@
 class   Dog : public Animal
 {
 private:
-    std::string type;
-    Brain       *brain;
+    Brain   *brain;
 public:
     Dog();
     Dog(const Dog& other);
     Dog& operator=(const Dog& other);
     ~Dog();
-    std::string getType() const;
     void    makeSound() const;
 };
 

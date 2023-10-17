@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:49 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/14 12:36:03 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:15:49 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,27 @@
 
 int main(void)
 {
-    // Animal  **ptr;
-    // int     n = 4;
+    // Cat var1;
 
-    // ptr = new Animal*[n];
-    // for (int i = 0; i < n; i++)
-    // {
-    //     if (i < n / 2)
-    //         ptr[i] = new Dog();
-    //     else
-    //         ptr[i] = new Cat();
-    //     std::cout<<std::endl;
-    // }
-    // std::cout<<"-------------------"<<std::endl;
-    // for (int i = 0; i < n; i++)
-    //     ptr[i]->makeSound();
-    // for(int i = 0; i < n; i++)
-    //     delete ptr[i];
-    // delete ptr;
-    // std::cout<<"Done!"<<std::endl;
-    // while (1);
+    // for (int i = 0; i < 100; i++)
+    //     var1.brain->ideas[i] = std::to_string(i);
+    // Cat var2;
+
+    // var2 = var1;
+    // for (int i = 0; i < 100; i++)
+    //     std::cout<<&var1.brain->ideas[i]<<"      "<<&var2.brain->ideas[i]<<std::endl;
+    // const Animal* meta = new Animal();
+    // const Animal* i = new Cat();
+    // const Animal* j = new Dog();
+    // std::cout << i->getType() << " -->Cat type" << std::endl;
+    // std::cout << j->getType() << " -->Dog type" << std::endl;
+    // i->makeSound(); //will output the cat sound!
+    // j->makeSound();
+    // meta->makeSound();
+
+
+    // delete meta;
+    // delete i;
+    // delete j;
     return 0;
 }

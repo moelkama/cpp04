@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:19 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/13 17:47:07 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:24:50 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     Animal(const Animal& other);
     Animal& operator=(const Animal& other);
     virtual ~Animal(void);
-    virtual std::string getType() const;
+    std::string getType() const;
     virtual void    makeSound() const;
 };
 

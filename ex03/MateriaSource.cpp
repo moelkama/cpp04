@@ -5,6 +5,11 @@
 MateriaSource::MateriaSource()
 {
     std::cout<<"MateriaSource constractor called"<<std::endl;
+    this->materias = new   AMateria*[MATERIAS_SIZE];
+    //chof new NULL;
+
+    for (int i = 0; i < MATERIAS_SIZE; i++)
+        this->materias[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other)
@@ -22,19 +27,28 @@ MateriaSource&  MateriaSource::operator=(const MateriaSource& other)
 MateriaSource::~MateriaSource()
 {
     std::cout<<"MateriaSource Destructor called"<<std::endl;
+    for(int i = 0; i < MATERIAS_SIZE; i++)
+        delete  materias[i];
+    delete[]    materias;
 }
 
-void MateriaSource::learnMateria(AMateria*)
+void MateriaSource::learnMateria(AMateria* m)
 {
-    std::cout<<"learnMateria called"<<std::endl;
+    // std::cout<<"learnMateria called"<<std::endl;
+    int i = 0;
+
+    for (i = 0 ; i < MATERIAS_SIZE && this->materias[i]; i++);
+    if (i < MATERIAS_SIZE)
+        this->materias[i] = m;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-    std::cout<<"creatMateria called"<<std::endl;
-    if (type == "Ice")
-        return (new Ice());
-    if (type == "Cure")
-        return (new Cure());
+    // std::cout<<"creatMateria called"<<std::endl;
+    int i = 0;
+
+    for (i = 0; i < MATERIAS_SIZE && this->materias[i] && type != materias[i]->getType(); i++);
+    if (i < MATERIAS_SIZE &&  this->materias[i] && type == materias[i]->getType())
+        return (materias[i]->clone());
     return (NULL);
 }

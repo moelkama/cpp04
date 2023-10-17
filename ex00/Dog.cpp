@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:45 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/12 11:32:28 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:25:48 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ Dog::~Dog()
 void    Dog::makeSound() const
 {
     std::cout<<"Dog : AppppppAppppp"<<std::endl;
-}
-
-std::string Dog::getType() const
-{
-    return (this->type);
 }

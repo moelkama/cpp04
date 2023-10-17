@@ -3,14 +3,17 @@
 
 #include "ICharacter.hpp"
 
+# ifndef INVENTORY_SIZE
+# define INVENTORY_SIZE 4
+# endif
+
 class Character: public ICharacter
 {
 private:
-    AMateria    **inventory;
     std::string name;
-private:
 public:
-    Character();
+    AMateria    **inventory;
+    Character(); // machi darrori
     Character(std::string name);
     Character(const Character& other);
     Character&   operator=(const Character& other);

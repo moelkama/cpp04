@@ -12,7 +12,6 @@ Ice::Ice(const Ice& other)
 
 Ice&   Ice::operator=(const Ice& other)
 {
-    //this->type = other.type;
     (void)other;
     return (*this);
 }

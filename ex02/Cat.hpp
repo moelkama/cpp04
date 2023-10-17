@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:32 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/12 11:38:40 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/17 14:13:18 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class   Cat : public Animal
+class   Cat : public AAnimal
 {
 private:
-    std::string type;
-    Brain       *brain;
+    Brain   *brain;
 public:
     Cat();
     Cat(const Cat& other);
     Cat& operator=(const Cat& other);
     ~Cat();
-    std::string getType() const;
     void    makeSound() const;
 };
 

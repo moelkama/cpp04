@@ -12,8 +12,8 @@ Brain::Brain(const Brain& other)
 
 Brain& Brain::operator=(const Brain& other)
 {
-    (void)other;///////////////////////////////////////////
-    // this.ideas = other.ideas;
+    for(int i = 0; i < IDEAS_SIZE; i++)
+        this->ideas[i] = other.ideas[i];
     return (*this);
 }
 

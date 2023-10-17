@@ -1,10 +1,16 @@
-#ifndef MATERIASOURCE
-#define MATERIASOURCE
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
 #include "IMateriaSource.hpp"
 
+# ifndef MATERIAS_SIZE
+# define MATERIAS_SIZE 4
+# endif
+
 class MateriaSource:public IMateriaSource
 {
+private:
+    AMateria    **materias;
 public:
     MateriaSource();
     MateriaSource(const MateriaSource& other);

@@ -6,7 +6,7 @@
 /*   By: moelkama <moelkama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:26:39 by moelkama          #+#    #+#             */
-/*   Updated: 2023/10/12 11:32:22 by moelkama         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:25:53 by moelkama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ Cat::~Cat()
 void    Cat::makeSound() const
 {
     std::cout<<"Cat : meoooooooo"<<std::endl;
-}
-
-std::string Cat::getType() const
-{
-    return (this->type);
 }
