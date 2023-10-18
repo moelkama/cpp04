@@ -4,11 +4,11 @@
 AMateria::AMateria()
 {
     std::cout<<"AMateria Default Constractor Called"<<std::endl;
-    this->type = "AMateria: not set";
 }
 
 AMateria::AMateria(std::string const& type)
 {
+    std::cout<<"AMateria Parameter Constractor Called"<<std::endl;
     this->type = type;
 }
 

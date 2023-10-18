@@ -12,7 +12,6 @@ Cure::Cure(const Cure& other)
 
 Cure&   Cure::operator=(const Cure& other)
 {
-    //this->type = other.type;
     (void)other;
     return (*this);
 }

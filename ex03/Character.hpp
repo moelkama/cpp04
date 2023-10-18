@@ -3,22 +3,23 @@
 
 #include "ICharacter.hpp"
 
-# ifndef INVENTORY_SIZE
-# define INVENTORY_SIZE 4
+# ifndef    INVENTORY_SIZE
+# define    INVENTORY_SIZE 4
 # endif
 
 class Character: public ICharacter
 {
 private:
     std::string name;
-public:
+    AMateria    **leaks;
     AMateria    **inventory;
-    Character(); // machi darrori
+public:
+    Character();
     Character(std::string name);
     Character(const Character& other);
     Character&   operator=(const Character& other);
-    ~Character();
 
+    ~Character();
     std::string const & getName() const ;
     void equip(AMateria* m);
     void unequip(int idx);
